@@ -1,0 +1,2294 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,zh-HK,zh-TW,default">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Java-notes - Calvin的博客</title>
+  
+    <meta name="keywords" content="JAVA">
+  
+
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0.2/assets/svg/1f300.svg">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+</head>
+
+  <body>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0.2/assets/svg/1f988.svg'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
+          
+            <div id='cover-backstretch'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">The Style Of Me</p>
+    
+    
+      <p class="subtitle">Nothing for nothing</p>
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/"
+              
+              
+              id="home">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0.2/assets/svg/1f985.svg'><p>主页</p>
+            </a>
+          
+            <a href="/categories/"
+              
+              
+              id="categories">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0.2/assets/svg/1f5fb.svg'><p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              id="tags">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>标签</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>时间轴</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img class='headimg' src='/cover2.jpg'/>
+      </a>
+    </div>
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Java-notes
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/about/" rel="nofollow">
+    <img no-lazy src="">
+    <p>Calvin</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年12月4日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Java-notes" data-path="/2021/12/04/JAVA-Notes/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：8.8k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：32分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <h1 id="Java-notes"><a href="#Java-notes" class="headerlink" title="Java-notes"></a>Java-notes</h1><h2 id="课内部分"><a href="#课内部分" class="headerlink" title="课内部分"></a>课内部分</h2><h3 id="Chapter-1（Java-概述）"><a href="#Chapter-1（Java-概述）" class="headerlink" title="Chapter-1（Java 概述）"></a>Chapter-1（Java 概述）</h3><ol>
+<li>Java技术的<strong>通用性</strong>、<strong>高效性</strong>、<strong>平台移植性</strong>和<strong>安全性</strong>，使之成为网络计算的理想技术</li>
+<li>Java语言是一种高级编程语言，它具有<strong>简单、结构中立、面向对象、可移植、分布式、高性能、多线程、健壮、动态、安全</strong>等特点</li>
+</ol>
+<h3 id="Chapter-2-（Java基础）"><a href="#Chapter-2-（Java基础）" class="headerlink" title="Chapter-2 （Java基础）"></a>Chapter-2 （Java基础）</h3><ol>
+<li><strong>标识符</strong>：为程序中的各个元素进行命名，这种命名的记号，就是标识符（Identifier）</li>
+<li><strong>标识符规则</strong>：在Java 中标识符是以字母、下划线（_）、美元符号（$）等开始的一个字符序列，不能包含运算符和一些特殊字符，如#、*等</li>
+<li><strong>关键字</strong>：Java中所有的关键字都为小写，不允许对关键字赋予其他含义</li>
+<li><strong>变量与常量</strong>：<ul>
+<li>变量的命名： <code>int i; public int j;</code> </li>
+<li>常量的命名：<code>final int k = 1;</code></li>
+</ul>
+</li>
+<li><strong>变量的邻近原则</strong>：若在一个作用域中，如果有多个同名的变量可以访问，则按照“邻近”原则，在当前域中定义的变量隐藏其它同名的变量。</li>
+<li><strong>数据类型</strong>：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>所占位数</th>
+<th>数的范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>8</td>
+<td>-2<sup>7</sup> ~ (2<sup>7</sup>-1)</td>
+</tr>
+<tr>
+<td>short</td>
+<td>16</td>
+<td>-2<sup>15</sup> ~ (2<sup>15</sup>-1)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>32</td>
+<td>-2<sup>31</sup> ~ (2<sup>31</sup>-1)</td>
+</tr>
+<tr>
+<td>long</td>
+<td>64</td>
+<td>-2<sup>63</sup> ~ (2<sup>63</sup>-1)</td>
+</tr>
+</tbody></table>
+<ol start="7">
+<li><strong>运算符</strong>：<ul>
+<li>“%”（求模运算符）的操作数可为浮点数, 如 52.3%10=2.3</li>
+<li>“+” 运算符可用作连接字符串；如果一个操作数是非字符串，其他操作数会自动转化为字符串，如 String s; s=”s:”+6*5</li>
+</ul>
+</li>
+</ol>
+<h3 id="Chapter-3（数组）"><a href="#Chapter-3（数组）" class="headerlink" title="Chapter-3（数组）"></a>Chapter-3（数组）</h3><ol>
+<li><p><strong>数组的创建</strong>：</p>
+<ul>
+<li>Step1 定义数组 ：数组元素类型 数组名[ ]    如 <code>int num_array[];</code> </li>
+<li>Step2 生成数组 ：数组名=new 数组元素类型[数组长度]  如 <code>num_array = new int[5];</code></li>
+<li>Step3 初始化数组 ：使数组中的各个元素有确定的数值   如 <code>num_array[1] = 15;</code></li>
+</ul>
+<p>或直接将内存分配放在一个语句中： <code>int num_array[] = &#123;0, 1, 2&#125;;</code></p>
+</li>
+<li><p>Java定义数组时，不会为数组分配存储空间</p>
+</li>
+<li><p><strong>Arrays类</strong>：Arrays类提供了多个操作数组的静态方法</p>
+<ul>
+<li><strong>binarySearch</strong>(type[] a,type key)：使用二分搜索法在数组a中搜索指定值key</li>
+<li><strong>equals</strong>(type[] a,type[] b)：比较两个数组是否相等</li>
+<li><strong>sort</strong>(type[] a)：对数组a进行排序(默认升序)</li>
+<li><strong>fill</strong> (type[] a, type val)：用一个指定的值val填充数组a</li>
+</ul>
+<p>例：<code>Arrays.sort(num_array);</code></p>
+</li>
+</ol>
+<h3 id="Chapter-4（类和对象设计）"><a href="#Chapter-4（类和对象设计）" class="headerlink" title="Chapter-4（类和对象设计）"></a>Chapter-4（类和对象设计）</h3><ol>
+<li><p>面向对象基础</p>
+<ul>
+<li>多态：类中同一名称的行为（方法）可以有多种不同的功能，或者相同的接口有多种实现方法。</li>
+</ul>
+</li>
+<li><p>用户必须先<strong>定义类</strong>，并<strong>生成该类的实例</strong>，然后才能通过该实例访问其成员变量和方法。</p>
+</li>
+<li><p>格式：</p>
+<p>[类修饰符] class 类名 [extends 父类名] [implements 接口名]  {</p>
+<pre><code>           //类体，包括定义类的成员变量 和 成员方法
+</code></pre>
+<p> }</p>
+</li>
+<li><p>包（package）：package语句必须是程序的第一条非空格、非注释语句；同一个包中，类不可以重名，但是不同的包中允许相同的类名出现</p>
+<ul>
+<li>格式：package pkg1[．pkg2[．pkg3…]];</li>
+<li><strong>import：</strong> pkg1.pkg2.* （*可以导入pkg2中所有的类）</li>
+<li><strong>import static:</strong> 用于导入指定类的某个静态成员变量 / 方法 / 或全部静态成员变量 / 方法（例如可以直接导入Math类中的变量PI）</li>
+</ul>
+</li>
+<li><p>修饰符：</p>
+</li>
+</ol>
+<ul>
+<li><p><strong>Public:</strong> 使用public，意味着public之后的成员声明对每个人都是有用的；修饰类时，一个类中最多只能有一个public，且类名需要与文件名相同</p>
+</li>
+<li><p><strong>Private:</strong> 即便是处于同一个包内的其他类也是不可以访问private成员的，通俗说就是自己隔离了自己</p>
+</li>
+<li><p><strong>Protected:</strong> protected处理的是继承的概念。只有<strong>继承他的类</strong>才可以访问他的方法（与public的区别是，只有<strong>同一个包中的类才可以访问</strong>）</p>
+</li>
+<li><p><strong>Default:</strong> 如果类成员前没有使用public,protected,private中的任何一个修饰符，我们称它使用了缺省(default)修饰符；只有该类本身以及与该类在同一个包中的其它类才可以直接访问这些缺省成员（与protected的区别是，不同包中的子类不可以访问）</p>
+</li>
+<li><p><strong>Final:</strong> </p>
+<ul>
+<li><p>修饰<strong>类</strong>时：不可被继承；</p>
+</li>
+<li><p>修饰<strong>方法</strong>时，不可被重写，可以被继承；</p>
+</li>
+<li><p>修饰<strong>引用</strong>时，若为基本数据类型，则为常量，不可修改；若为引用数据类型，则地址不可修改，对象本身的属性可以修改</p>
+<p>final int[] {1, 3, 2}; arr[2] = 4; <del>arr = new int[] {12341};</del>（不可修改地址）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Static:</strong> 可以在没有创建对象的情况下来进行调用（方法/变量）</p>
+<ul>
+<li><p>修饰<strong>方法</strong>时：静态方法，可以在没有创建对象的情况下来进行调用（方法/变量），不依附于任何对象，因此没有this；静态方法<strong>不可以</strong>访问成员的非静态方法/变量；非静态方法可以访问静态方法/变量</p>
+</li>
+<li><p>修饰<strong>变量</strong>时：静态变量，静态变量被所有的对象所共享，在内存中只有一个副本，它当且仅当在类初次加载时会被初始化。而非静态变量是对象所拥有的，在创建对象的时候被初始化，存在多个副本，各个对象拥有的副本互不影响</p>
+</li>
+<li><p>修饰<strong>代码块</strong>时：用来形成静态代码块以优化程序性能。static块可以置于类中的任何地方，类中可以有多个static块。在类初次被加载的时候，会按照static块的顺序来执行每个static块，并且只会执行一次</p>
+<p>static { </p>
+<p>//代码块（只会在类加载的时候执行一次）</p>
+<p>}</p>
+</li>
+<li><p><strong>注意⚠️</strong>：Java中的static不可以用于修饰局部变量；static不改变成员的访问权限（只受public private protected影响）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Chapter-5-（继承与多态）"><a href="#Chapter-5-（继承与多态）" class="headerlink" title="Chapter-5 （继承与多态）"></a>Chapter-5 （继承与多态）</h3><ol>
+<li><p><strong>继承</strong>：Java只支持单继承，即只能有一个父类，但类之间的继承可以具有传递性；子类可以通过继承获得父类中<strong>除访问权限为private</strong>的成员变量和方法</p>
+<ul>
+<li><p>格式：</p>
+<p>class  子类名  extends  父类名{</p>
+<pre><code> 类体
+</code></pre>
+<p>}</p>
+</li>
+</ul>
+</li>
+<li><p><strong>重写（override）</strong>：在类的继承过程中，如果子类中新增的变量和方法与父类中的变量和方法<strong>同名</strong>，则称为重写（或覆盖）；方法重写不仅要求父类与子类中的方法名称相同，而且参数列表也要相同，只是实现的功能不同</p>
+</li>
+<li><p><strong>super</strong>：</p>
+<ol>
+<li>用来<strong>引用当前对象的父类</strong>，可以使用它访问父类中被覆盖的成员<ul>
+<li>格式：super.method</li>
+</ul>
+</li>
+<li><strong>调用父类中的某一个构造函数</strong>（应该为构造函数中的第一条语句）；若类没有任何构造方法，编译器会自动添加一个无参构造方法，在此方法中只有一条语句super()，若已有有参的构造方法，则不会自动添加<ul>
+<li>格式：super(参数);</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>this</strong>：是自身的一个对象，代表对象本身，可以理解为：<strong>指向对象本身的一个指针</strong></p>
+<ol>
+<li><p>普通的<strong>直接引用</strong>，this 相当于是指向当前对象本身</p>
+</li>
+<li><p><strong>形参与成员名字重名，用 this 来区分</strong>：</p>
+<ul>
+<li><p>public int GetAge(int age){</p>
+<p>​        this.age = age;        </p>
+<p>return this.age;             //这里 age 是 GetAge 成员方法的形参，this.age 是 Person 类的成员变量</p>
+<p> }</p>
+</li>
+</ul>
+</li>
+<li><p><strong>引用构造函数</strong>；调用本类中另一种形式的构造函数（应该为构造函数中的第一条语句）</p>
+<ul>
+<li>格式：this(参数);</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>注意⚠️：</strong>this和 super都指的是对象，所以，均<strong>不可以</strong>在 <strong>static</strong> 环境中使用</p>
+<ol start="5">
+<li><p><strong>类型转换</strong></p>
+<ol>
+<li><p>如果是子类对象转换为父类，可进行显式转换或隐式转换：</p>
+<p>Dad = (father) A</p>
+<p>Child = (child) B    //显式转换</p>
+</li>
+<li><p>如果是父类对象转换成子类，编译器首先要检查这种转换的可行性，如果可行，则必须进行<strong>显式转换</strong></p>
+</li>
+</ol>
+</li>
+<li><p><strong>多态</strong>：多态性就是一个名称可以对应多种不同的实现方法；对重写的方法，Java根据调用该方法的实例的类型来决定选择哪个方法（c++需要添加virtual）</p>
+</li>
+<li><p><strong>抽象类（abstract）</strong>：Java 中抽象类表示的是一种继承关系，一个类只能继承一个抽象类，而一个类却可以实现多个接口</p>
+<ol>
+<li>抽象类不能被实例化，必须被继承；抽象方法只有方法的返回值、名称和参数列表，没有方法体，它必须在子类中具体实现该方法</li>
+<li>抽象类没有自己的主体（没有{}包起来的 业务逻辑），跟接口中的方法有点类似。所以没法直接调用抽象方法</li>
+<li>抽象类可以比作不同的交通工具有不同的结果，自行车靠骑，汽车靠发动机运行；因此抽象类只是提供一个 交通工具类（），具体到自行车还是汽车，需要被子类所继承/重写；抽象方法也是同理。因此，抽象方法不可以是static或private，因为抽象方法没有主体，且需要权限访问重写</li>
+</ol>
+</li>
+<li><p><strong>接口（interface）</strong>：是一个抽象类型，是抽象方法的集合</p>
+<ol>
+<li>接口中的所有方法都是抽象的（可以不写abstract），也没有方法体{}；接口中的所有数据都是静态常量（static,final可以不写）</li>
+<li>一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类</li>
+<li>接口支持多继承（可以有多个父类）</li>
+</ol>
+<ul>
+<li><p>格式：</p>
+<p>[可见度] interface 接口名称 [extends 其他的接口名] { </p>
+<p>​              // 声明变量        // 抽象方法 </p>
+<p>}</p>
+</li>
+</ul>
+</li>
+<li><p><strong>接口实现：</strong>当类实现接口的时候，类要实现接口中所有的方法。否则，类必须声明为抽象的类；类使用implements关键字实现接口。在类声明中，Implements关键字放在class声明后面</p>
+<ul>
+<li>格式：<code>...implements 接口名称[, 其他接口名称, 其他接口名称..., ...] ...</code></li>
+</ul>
+</li>
+<li><p><strong>内部类：</strong></p>
+<ol>
+<li><p>成员内部类：成员内部类是最普通的内部类，它的定义为位于另一个类的内部</p>
+<ul>
+<li><p>员内部类可以无条件访问外部类的所有成员属性和成员方法（包括private成员和静态成员）;　</p>
+</li>
+<li><p>不过要注意的是，当成员内部类拥有和外部类同名的成员变量或者方法时，会发生隐藏现象，即默认情况下访问的是成员内部类的成员。如果要访问外部类的同名成员，需要以下面的形式进行访问：外部类.this.成员变量/方法；</p>
+</li>
+<li><p>在外部类中如果要访问成员内部类的成员，必须先创建一个成员内部类的对象，再通过指向这个对象的引用来访问（需要先new一个内部类）</p>
+<p>Test outer = new Test();</p>
+<p>Test.inner in = outer.new inner();</p>
+</li>
+</ul>
+</li>
+<li><p>局部内部类：</p>
+<ul>
+<li>局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内</li>
+<li>局部内部类就像是方法里面的一个局部变量一样，是<strong>不能有</strong>public、protected、private以及static修饰符</li>
+</ul>
+</li>
+<li><p>匿名内部类：</p>
+<ul>
+<li><p>可以在定义一个类的同时将它实例化，与局部内部类很相似，区别是它没有类名；如果某个类只需要使用一次，则可以选择采用匿名内部类来简化代码。</p>
+</li>
+<li><p>前提：必须继承一个父类或实现一个接口,然后继承或重写父类或接口中的方法</p>
+</li>
+<li><p>格式：father name = new father(){</p>
+<p>​                public void xxx{</p>
+<p>​                }</p>
+<p>​            };</p>
+</li>
+</ul>
+</li>
+<li><p>静态内部类：静态内部类也是定义在另一个类里面的类，只不过在类的前面多了一个关键字static</p>
+<ul>
+<li>一旦内部类使用static修饰，这个类就为顶级类；除了写在类内部以外，具有外部类的一切特性</li>
+<li>静态内部类可以在内部定义static元素，在构建对象时可以一次性完成（非静态需要先new一个外部类）</li>
+<li><strong>内部接口</strong>自动具有static属性，普通类可以直接实现接口</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>Lambda表达式：</strong>用函数表达式代替常规的代码</p>
+<ol>
+<li><p>特性：</p>
+<ul>
+<li><strong>可选类型声明：</strong>不需要声明参数类型，编译器可以统一识别参数值</li>
+<li><strong>可选的参数圆括号：</strong>一个参数无需定义圆括号，但多个参数需要定义圆括号</li>
+<li><strong>可选的大括号：</strong>如果主体包含了一个语句，就不需要使用大括号</li>
+<li><strong>可选的返回关键字：</strong>如果主体只有一个表达式返回值则编译器会自动返回值，大括号需要指定表达式返回了一个数值</li>
+</ul>
+</li>
+<li><p>语法格式：</p>
+<p>(parameters) -&gt; expression      或      (parameters) -&gt;{ statements; return;}</p>
+</li>
+<li><p>可以用lambda表达式代替匿名内部类或Runnable接口</p>
+</li>
+<li><p>例子：</p>
+<ul>
+<li>```java<br>Comparator c = (Person p1, Person p2) -&gt; p1.getAge().compareTo(p2.getAge());<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- ```java</span><br><span class="line">  features.forEach(n -&gt; System.out.println(n));</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>泛型:</strong></p>
+<ol>
+<li><p>操作的数据类型被指定为一个参数，这种参数类型可以用在类、接口和方法中，分别被称为泛型类、泛型接口、泛型方法</p>
+</li>
+<li><p>常见的如<strong>T、E、K、V</strong>等形式的参数常用于表示泛型</p>
+</li>
+<li><p><strong>泛型类：</strong></p>
+<ul>
+<li>格式：（泛型的类型参数只能是类类型，不能是简单类型）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 类名称 &lt;泛型标识：可以随便写任意标识号，标识指定的泛型的类型&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> 泛型标识 <span class="comment">/*（成员变量类型）*/</span> <span class="keyword">var</span>; </span><br><span class="line">  .....</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//exp:</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Generic</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> T key;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>泛型接口:</strong></p>
+<ul>
+<li><p>格式：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//定义一个泛型接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Generator</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">next</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>泛型方法：</strong></p>
+<ol>
+<li>泛型方法，是在调用方法的时候指明泛型的具体类型</li>
+</ol>
+<ul>
+<li><p>格式：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;T&gt; <span class="function">T <span class="title">genericMethod</span><span class="params">(Class&lt;T&gt; tClass)</span><span class="keyword">throws</span> InstantiationException ,</span></span><br><span class="line"><span class="function">  IllegalAccessException</span>&#123;</span><br><span class="line">        T instance = tClass.newInstance();</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>注解：</strong>注解就是对于代码中某些鲜活个体的贴上去的一张标签</p>
+<ol>
+<li><p><strong>元注解</strong></p>
+<ul>
+<li><p>元注解是可以注解到注解上的注解，或者说元注解是一种基本注解</p>
+</li>
+<li><p>元标签有 @Retention、@Documented、@Target、@Inherited、@Repeatable 5 种</p>
+<ol>
+<li><p><strong>@Retention</strong></p>
+<ul>
+<li><p>它解释说明了这个注解的的存活时间</p>
+</li>
+<li><p>它的取值如下：</p>
+<ol>
+<li><p>RetentionPolicy.SOURCE 注解只在源码阶段保留，在编译器进行编译时它将被丢弃忽视。</p>
+</li>
+<li><p>RetentionPolicy.CLASS 注解只被保留到编译进行的时候，它并不会被加载到 JVM 中。</p>
+</li>
+<li><p>RetentionPolicy.RUNTIME 注解可以保留到程序运行的时候，它会被加载进入到 JVM 中，所以在程序运行时可以获取到它们。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>@Documented</strong></p>
+<ul>
+<li>它的作用是能够将注解中的元素包含到 Javadoc 中去</li>
+</ul>
+</li>
+<li><p><strong>@Target</strong></p>
+<ol>
+<li>指定了注解运用的地方，当一个注解被 @Target 注解时，这个注解就被限定了运用的场景</li>
+<li>@Target 有下面的取值<ul>
+<li>ElementType.ANNOTATION_TYPE 可以给一个注解进行注解</li>
+<li>ElementType.CONSTRUCTOR 可以给构造方法进行注解</li>
+<li>ElementType.FIELD 可以给属性进行注解</li>
+<li>ElementType.LOCAL_VARIABLE 可以给局部变量进行注解</li>
+<li>ElementType.METHOD 可以给方法进行注解</li>
+<li>ElementType.PACKAGE 可以给一个包进行注解</li>
+<li>ElementType.PARAMETER 可以给一个方法内的参数进行注解</li>
+<li>ElementType.TYPE 可以给一个类型进行注解，比如类、接口、枚举</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>@Inherited</strong></p>
+<ul>
+<li>Inherited 是继承的意思，但是它并不是说注解本身可以继承，而是说如果一个超类被 @Inherited 注解过的注解进行注解的话，那么如果它的子类没有被任何注解应用的话，那么这个子类就继承了超类的注解</li>
+<li>注解 Test 被 @Inherited 修饰，之后类 A 被 Test 注解，类 B 继承 A,类 B 也将拥有 Test 这个注解</li>
+</ul>
+</li>
+<li><p><strong>@Repeatable</strong></p>
+<ul>
+<li>可重复的意思，标识某注解可以在同一个声明上使用多次</li>
+<li>Persons 是一张总的标签，上面贴满了 Person 这种同类型但内容不一样的标签。把 Persons 给一个 SuperMan 贴上，相当于同时给他贴了程序员、产品经理、画家的标签</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>注解的属性</strong></p>
+<ol>
+<li><p>注解的属性也叫做成员变量。注解只有成员变量，没有方法。注解的成员变量在注解的定义中以“无形参的方法”形式来声明，其方法名定义了该成员变量的名字，其返回值定义了该成员变量的类型</p>
+</li>
+<li><p>赋值的方式是在注解的括号内以 value=”” 形式，多个属性之前用 ，隔开  <code>@&lt;注解名&gt;(&lt;成员名1&gt;=&lt;成员值1&gt;,&lt;成员名1&gt;=&lt;成员值1&gt;,...)</code></p>
+</li>
+<li><p>需要注意的一种情况是一个注解没有任何属性  public @interface Perform {}</p>
+<p>那么在应用这个注解的时候，括号都可以省略  @Perform</p>
+</li>
+</ol>
+</li>
+<li><p><strong>Java预置的注解</strong></p>
+<ol>
+<li><p><strong>@Deprecated</strong></p>
+<p>这个元素是用来标记过时的元素。编译器在编译阶段遇到这个注解时会发出提醒警告，告诉开发者正在调用一个过时的元素比如过时的方法、过时的类、过时的成员变量</p>
+</li>
+<li><p><strong>@Override</strong></p>
+<p>提示子类要复写父类中被 @Override 修饰的方法</p>
+</li>
+<li><p><strong>@SuppressWarnings</strong></p>
+<p>阻止警告的意思，调用被 @Deprecated 注解的方法后，编译器会警告提醒，而有时候开发者会忽略这种警告，他们可以在调用的地方通过 @SuppressWarnings 达到目的</p>
+</li>
+<li><p><strong>@SafeVarargs</strong></p>
+<p>参数安全类型注解，它的目的是提醒开发者不要用参数做一些不安全的操作,它的存在会阻止编译器产生 unchecked 这样的警告。它是在 Java 1.7 的版本中加入的</p>
+</li>
+<li><p><strong>@FunctionalInterface</strong></p>
+<ul>
+<li><p>函数式接口注解，这个是 Java 1.8 版本引入的新特性。函数式接口 (Functional Interface) 就是一个具有一个方法的普通接口。</p>
+</li>
+<li><p>进行线程开发中常用的 Runnable 就是一个典型的函数式接口可以看到它就被 @FunctionalInterface 注解</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>自定义注解</strong></p>
+<ul>
+<li>格式：public @interface 注解名 {定义体}</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="Chapter-6（标准类库）"><a href="#Chapter-6（标准类库）" class="headerlink" title="Chapter-6（标准类库）"></a>Chapter-6（标准类库）</h3><ol>
+<li><p>字符串类：</p>
+<ol>
+<li><p>String的构造：</p>
+<ul>
+<li><p>String s = new String(“String test”); </p>
+</li>
+<li><p>String s = “String test”;</p>
+</li>
+<li><p>```java<br>char temp_box[] = {‘a’, ‘b’, ‘c’};   //数组构造<br>String temp3 = new String(temp_box);</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">2. 常用方法：</span><br><span class="line"></span><br><span class="line">   - **.length()**   求String长度</span><br><span class="line">   - **.equals()**   判断两个字符串是否相同</span><br><span class="line">   - **.compareTo()**   长度相同,从第一位开始比较，如果相同返回0，如果不同则马上返回这两个字符的ascii值的差值; 长度不同,直接返回长度差值</span><br><span class="line">   - **.indexOf()**   由前向后查找指定字符串位置，如果超找到了则返回（第一个字母）位置索引，如果找不到返回-1</span><br><span class="line">   - **.substring(int beginIndex,int endIndex)**   获得的子串是从当前字符串的beginIndex处开始截取到endIndex-1结束所得到的字符串</span><br><span class="line">   - **.replaceAll(String old, String new)**   用new字符串替换old字符串</span><br><span class="line">   - **.trim()**   用于删除字符串的头尾空白符</span><br><span class="line"></span><br><span class="line">3. StringBuffer类：</span><br><span class="line"></span><br><span class="line">   - 对字符串进行修改时，需要使用StringBuffer类；StringBuffer类可以多次修改，并且不产生新的未使用对象（因为只对StringBuffer对象本身进行操作）</span><br><span class="line"></span><br><span class="line">4. StringBuilder类：</span><br><span class="line"></span><br><span class="line">   - StringBuilder 类在 Java 5 中被提出，它和 StringBuffer 之间的最大不同在于 StringBuilder 的方法不是线程安全的；且相较于StringBuffer，有速度优势</span><br><span class="line"></span><br><span class="line">   - ```java</span><br><span class="line">     //代码事例：</span><br><span class="line">     StringBuilder temp = new StringBuilder(10);  //capacity = 10</span><br><span class="line">     temp.append(&quot;noob..&quot;);</span><br><span class="line">     temp.insert(3,&quot;a&quot;);</span><br></pre></td></tr></table></figure></li>
+<li><p>常用方法：</p>
+<ul>
+<li><strong>.capacity()</strong>   返回当前容量 </li>
+<li><strong>.append(String value)</strong>  添加指定字符串到此序列</li>
+<li><strong>.insert(int index, String value)</strong>    在index处插入字符串value</li>
+<li><strong>.reverse()</strong>   将此字符串用反转形式取代</li>
+<li><strong>.delete(int start, int end)</strong>   删除 [start,end) 处的字符串</li>
+<li><strong>.replace(int start, int end, String value)</strong>   使用给定value中的字符替换此序列的子字符串中[start,end)的字符</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>System类：</p>
+<ul>
+<li><strong>.currentTimeMillis( )</strong>   返回自1970年1月1日午夜起到现在的时间，时间单位是毫秒</li>
+<li><strong>.arraycopy(src, src_start_Pos, dest, dest_start_Pos, length)</strong>   可以将一个任意类型的数组快速地从一个地方复制到另一个地方(这比使用Java中编写的循环要快的多);需要注意的是目标数组相对应位置上的元素会被覆盖掉</li>
+</ul>
+</li>
+<li><p>Runtime类：</p>
+<ul>
+<li><p>Runtime r = new Runtime.getRuntime()； </p>
+<p>r.totalMemory();   r.freeMemory();         可以用于获取Java虚拟机内部的内存使用</p>
+</li>
+</ul>
+</li>
+<li><p>Math类：</p>
+<ul>
+<li><strong>.nextInt(int n)</strong>   返回一个[0,n) 的随机整数</li>
+<li><strong>.nextDouble();  .nextLong();  .nextBoolean();</strong>   返回一个随机值</li>
+</ul>
+</li>
+<li><p>Collection集合类：</p>
+<ul>
+<li>主要分为3种：Set、Map和List</li>
+<li>面向接口编程，先定义接口，再定义实现类</li>
+<li>常用方法：<ul>
+<li>.add(); .remove(); .size(); .toarray();</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ArrayList类：</p>
+<ul>
+<li><p>Iterator：</p>
+<p>ArrayList al = new ArrayList();</p>
+<p>Iterator it = al.iterator();</p>
+</li>
+<li><p>Map;HashMap;Set;HashSet;TreeSet类</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="Chapter-7（异常处理）"><a href="#Chapter-7（异常处理）" class="headerlink" title="Chapter-7（异常处理）"></a>Chapter-7（异常处理）</h3><p>异常的根类是 <strong>Throwable</strong> ，异常类可以分为<strong>Error</strong>和<strong>Exception</strong></p>
+<ol>
+<li><p><strong>Error</strong></p>
+<p>Error通常是无法处理的异常，比如OutOfMemoryError，一般发生这种异常，JVM会选择终止程序</p>
+</li>
+<li><p><strong>Exception</strong></p>
+<p>Exception是可以处理的异常，比如NullPointerException、IndexOutOfBoundsException；Exception类的异常包括checked exception和unchecked exception（unchecked exception也称运行时异常RuntimeException，当然这里的运行时异常并不是前面所说的运行期间的异常，只是Java中用运行时异常这个术语来表示，Exception类的异常都是在运行期间发生的）</p>
+<ul>
+<li><p><strong>unchecked exception（非检查异常）</strong></p>
+<p>也称运行时异常（RuntimeException），比如常见的NullPointerException、IndexOutOfBoundsException。对于运行时异常，java编译器不要求必须进行异常捕获处理或者抛出声明，由程序员自行决定</p>
+</li>
+<li><p><strong>checked exception（检查异常）</strong></p>
+<p>也称非运行时异常（运行时异常以外的异常就是非运行时异常），java编译器强制程序员必须进行捕获处理，比如常见的IOExeption和SQLException。对于非运行时异常如果不进行捕获或者抛出声明处理，编译都不会通过</p>
+</li>
+</ul>
+</li>
+<li><p><strong>异常的处理</strong></p>
+<ol>
+<li><p><strong>Try…catch…finally</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">     <span class="comment">//try块中放可能发生异常的代码    </span></span><br><span class="line">  	 <span class="comment">//如果执行完try且不发生异常，则接着去执行finally块和finally后面的代码（如果有的话）</span></span><br><span class="line">  	 <span class="comment">//如果发生异常，则尝试去匹配catch块</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(SQLException SQLexception)&#123;</span><br><span class="line">     <span class="comment">//每一个catch块用于捕获并处理一个特定的异常，或者这异常类型的子类。Java7中可以将多个异常声明在一个catch中</span></span><br><span class="line">     <span class="comment">//catch后面的括号定义了异常类型和异常参数。如果异常与之匹配且是最先匹配到的，则虚拟机将使用这个catch块来处理异常</span></span><br><span class="line">     <span class="comment">//在catch块中可以使用这个块的异常参数来获取异常的相关信息。异常参数是这个catch块中的局部变量，其它块不能访问</span></span><br><span class="line">     <span class="comment">//如果当前try块中发生的异常在后续的所有catch中都没捕获到，则先去执行finally，然后到这个函数的外部caller中去匹配异常处理器</span></span><br><span class="line">    	<span class="comment">//如果try中没有发生异常，则所有的catch块将被忽略</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(Exception exception)&#123;</span><br><span class="line">    	<span class="comment">//如果同一个try块下的多个catch异常类型有父子关系，应该将子类异常放在前面，父类异常放在后面</span></span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">      <span class="comment">//finally块通常是可选的   </span></span><br><span class="line">  		<span class="comment">//无论异常是否发生，异常是否匹配被处理，finally都会执行</span></span><br><span class="line">   		<span class="comment">//一个try至少要有一个catch块，否则， 至少要有1个finally块。但是finally不是用来处理异常的，finally不会捕获异常</span></span><br><span class="line">  	  <span class="comment">//finally主要做一些清理工作，如流的关闭，数据库连接的关闭等</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>java中，异常处理的任务就是将执行控制流从异常发生的地方转移到能够处理这种异常的地方去。也就是说：当一个函数的某条语句发生异常时，这条语句的后面的语句不会再执行，它失去了焦点。执行流跳转到最近的匹配的异常处理catch代码块去执行，异常被处理完后，执行流会接着在“处理了这个异常的catch代码块”后面接着执行。</p>
+</li>
+<li><p><strong>Throws函数</strong></p>
+<ul>
+<li><p>throws是另一种处理异常的方式，它不同于try…catch…finally，throws仅仅是将函数中可能出现的异常向调用者声明，而自己则不具体处理</p>
+</li>
+<li><p>如果一个方法内部的代码会抛出检查异常（checked exception），而方法自己又没有完全处理掉，则javac保证你必须在方法的签名上使用throws关键字声明这些可能抛出的异常，否则编译不通过</p>
+</li>
+<li><p>采取这种异常处理的原因可能是：方法本身不知道如何处理这样的异常，或者说让调用者处理更好，调用者需要为可能发生的异常负责</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">foo</span><span class="params">()</span> <span class="keyword">throws</span> ExceptionType1 , ExceptionType2 ,ExceptionTypeN</span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">     <span class="comment">//foo内部可以抛出 ExceptionType1 , ExceptionType2 ,ExceptionTypeN 类的异常，或者他们的子类的异常对象</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>Throws和Throw</strong></p>
+<ol>
+<li><p>throws  是方法可能抛出异常的声明(用在声明方法时，表示该方法可能要抛出异常)  调用者必须做出处理（捕获或继续抛出）</p>
+<ul>
+<li>  public void doA(int a) <strong>throws</strong> Exception1,Exception3{……}</li>
+</ul>
+</li>
+<li><p>throw  是语句抛出一个异常</p>
+<ul>
+<li>throw e;</li>
+</ul>
+</li>
+<li><p>throws可以单独使用，但throw不能， throw要么和try-catch-finally语句配套使用，要么与throws配套使用。但throws可以单独使用，然后再由处理异常的方法捕获</p>
+</li>
+<li><p>throw语句用在方法体内,表示抛出异常,由方法体内的语句处理 </p>
+<p>throws语句用在方法声明后面,表示再抛出异常,由调用这个方法的上一级方法中的语句来处理，必须做出处理(捕获或继续声明)</p>
+</li>
+<li><p>throws主要是声明这个方法会抛出这种类型的异常，使其他地方调用它时知道要捕获这个异常，使得提醒必须做出处理。否则编译是不会通过的<br>throw是具体向外抛异常的动作，所以它是抛出一个异常实例</p>
+</li>
+</ol>
+</li>
+<li><p><strong>Finally块</strong></p>
+<ol>
+<li>finally块不管异常是否发生，只要对应的try执行了，则它一定也执行。只有一种方法让finally块不执行：System.exit()。因此finally块通常用来做资源释放操作：关闭文件，关闭数据库连接等等。</li>
+<li>良好的编程习惯是：在try块中打开资源，在finally块中清理释放这些资源</li>
+<li>finally块没有处理异常的能力。处理异常的只能是catch块</li>
+<li>在同一try…catch…finally块中 ，如果try中抛出异常，且有匹配的catch块，则先执行catch块，再执行finally块。如果没有catch块匹配，则先执行finally，然后去外面的调用者中寻找合适的catch块</li>
+<li>在同一try…catch…finally块中 ，try发生异常，且匹配的catch块中处理异常时也抛出异常，那么后面的finally也会执行：首先执行finally块，然后去外围调用者中寻找合适的catch块</li>
+<li>在 try块中即便有return，break，continue等改变执行流的语句，finally也会执行</li>
+</ol>
+</li>
+</ol>
+<p>⚠️注意：</p>
+<ol>
+<li><p>当子类重写父类的带有 throws声明的函数时，其throws声明的异常必须在父类异常的可控范围内——用于处理父类的throws方法的异常处理器，必须也适用于子类的这个带throws方法 。这是为了支持多态</p>
+</li>
+<li><p>Java程序可以是多线程的。每一个线程都是一个独立的执行流，独立的函数调用栈。如果程序只有一个线程，那么没有被任何代码处理的异常 会导致程序终止。如果是多线程的，那么没有被任何代码处理的异常仅仅会导致异常所在的线程结束</p>
+<p>也就是说，Java中的异常是线程独立的，线程的问题应该由线程自己来解决，而不要委托到外部，也不会直接影响到其它线程的执行</p>
+</li>
+<li><p>finally和return建议</p>
+<ul>
+<li><p>不要在fianlly中使用return</p>
+</li>
+<li><p>不要在finally中抛出异常</p>
+</li>
+<li><p>减轻finally的任务，不要在finally中做一些其它的事情，finally块仅仅用来释放资源是最合适的</p>
+</li>
+<li><p>将尽量将所有的return写在函数的最后面，而不是try … catch … finally中</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="Chapter-8（输入输出处理）"><a href="#Chapter-8（输入输出处理）" class="headerlink" title="Chapter-8（输入输出处理）"></a>Chapter-8（输入输出处理）</h3><ol>
+<li><p>Java流</p>
+<p>标准输入输出，文件的操作，网络上的数据流，字符串流，对象流，zip文件流等等，java中将输入输出抽象称为流，就好像水管，将两个容器连接起来。将数据冲外存中读取到内存中的称为输入流，将数据从内存写入外存中的称为输出流</p>
+<p>流是一个很形象的概念，当程序需要读取数据的时候，就会开启一个通向数据源的流，这个数据源可以是文件，内存，或是网络连接。类似的，当程序需要写入数据的时候，就会开启一个通向目的地的流</p>
+<ul>
+<li><p>流按照流向可以分为两种，输入流InputStream和输出流OutputStream</p>
+</li>
+<li><p>按照处理数据单元可以分为两种，字节流（8位通用字节流）和字符流（16位Unicode字符流）</p>
+<ol>
+<li><p><strong>InputStream抽象类</strong> </p>
+<p>InputStream 为字节输入流，它本身为一个抽象类，必须依靠其子类实现各种功能，此抽象类是表示字节输入流的所有类的超类。 继承自InputStream 的流都是向程序中输入数据的，且数据单位为字节（8bit）</p>
+<p><strong>Inputstream类中的常用方法</strong>： </p>
+<ul>
+<li><strong>public abstract int read( )：</strong>读取一个byte的数据，返回值是高位补0的int类型值。若返回值=-1说明没有读取到任何字节读取工作结束</li>
+<li><strong>public int read(byte b[ ])：</strong>读取b.length个字节的数据放到b数组中。返回值是读取的字节数。该方法实际上是调用下一个方法实现的 </li>
+<li><strong>public int read(byte b[ ], int off, int len)：</strong>从输入流中最多读取len个字节的数据，存放到偏移量为off的b数组中</li>
+<li><strong>public int available( )：</strong>返回输入流中可以读取的字节数。注意：若输入阻塞，当前线程将被挂起，如果InputStream对象调用这个方法的话，它只会返回0，这个方法必须由继承InputStream类的子类对象调用才有用</li>
+<li><strong>public long skip(long n)：</strong>忽略输入流中的n个字节，返回值是实际忽略的字节数, 跳过一些字节来读取 </li>
+<li><strong>public int close( ) ：</strong>我们在使用完后，必须对我们打开的流进行关闭</li>
+</ul>
+</li>
+<li><p><strong>OutputStream抽象类</strong></p>
+<p>OutputStream提供了3个write方法来做数据的输出，这个是和InputStream是相对应的</p>
+<ul>
+<li><p><strong>public void write(byte b[ ])：</strong>将参数b中的字节写到输出流。</p>
+</li>
+<li><p><strong>public void write(byte b[ ], int off, int len) ：</strong>将参数b的从偏移量off开始的len个字节写到输出流。</p>
+</li>
+<li><p><strong>public abstract void write(int b) ：</strong>先将int转换为byte类型，把低字节写入到输出流中</p>
+</li>
+<li><p><strong>public void flush( ) :</strong> 将数据缓冲区中数据全部输出，并清空缓冲区</p>
+</li>
+<li><p><strong>public void close( ) :</strong> 关闭输出流并释放与流相关的系统资源</p>
+</li>
+</ul>
+<p><em>流结束的判断：方法read()的返回值为-1时；readLine()的返回值为null时</em></p>
+</li>
+<li><p><strong>文件输入流： FileInputStream类</strong></p>
+<p>FileInputStream可以使用read()方法一次读入一个字节，并以int类型返回，或者是使用read()方法时读入至一个byte数组，byte数组的元素有多少个，就读入多少个字节。在将整个文件读取完成或写入完毕的过程中，这么一个byte数组通常被当作缓冲区，因为这么一个byte数组通常扮演承接数据的中间角色</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">code01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">        File dir = <span class="keyword">new</span> File(<span class="string">&quot;/Users/calvin/IdeaProjects/test/src/iostream_demon&quot;</span>);</span><br><span class="line">        File f1 = <span class="keyword">new</span> File(dir, <span class="string">&quot;code01.java&quot;</span>);</span><br><span class="line">        System.out.println(f1);</span><br><span class="line">        System.out.println(<span class="string">&quot;exist :&quot;</span> + f1.exists());</span><br><span class="line">        System.out.println(<span class="string">&quot;name :&quot;</span> + f1.getName());</span><br><span class="line">        System.out.println(<span class="string">&quot;path :&quot;</span> + f1.getPath());</span><br><span class="line">        System.out.println(<span class="string">&quot;absolute path :&quot;</span> + f1.getAbsolutePath());</span><br><span class="line">        System.out.println(<span class="string">&quot;parent :&quot;</span> + f1.getParent());</span><br><span class="line">        System.out.println(<span class="string">&quot;is a file :&quot;</span> + f1.isFile());</span><br><span class="line">        System.out.println(<span class="string">&quot;is a dictionary :&quot;</span> + f1.isDirectory());</span><br><span class="line">        System.out.println(<span class="string">&quot;length :&quot;</span> + f1.length());</span><br><span class="line">        File temp_file = File.createTempFile(<span class="string">&quot;temp_file01&quot;</span>,<span class="string">&quot;.tmp&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;absolute path :&quot;</span> + temp_file.getAbsolutePath());</span><br><span class="line">        System.out.println(<span class="string">&quot;length :&quot;</span> + temp_file.length());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>文件输出流:FileOutputStream类</strong></p>
+<p>用来处理以文件作为数据输出目的数据流；或者说是从内存区读数据入文件</p>
+<p>FileOutputStream类用来处理以文件作为数据输出目的数据流；一个表示文件名的字符串，也可以是File或FileDescriptor对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//创建一个文件流对象有两种方法： </span></span><br><span class="line">　　<span class="comment">//方式1： </span></span><br><span class="line">　　 File   f=<span class="keyword">new</span>  File (“d:/myjava/write.txt <span class="string">&quot;);</span></span><br><span class="line"><span class="string">        FileOutputStream  out= new FileOutputStream (f);</span></span><br><span class="line"><span class="string">　　//方式2： </span></span><br><span class="line"><span class="string">　　FileOutputStream out=new FileOutputStream(“d:/myjava/write.txt &quot;</span>); </span><br><span class="line">　　<span class="comment">//方式3：构造函数将 FileDescriptor()对象作为其参数。 </span></span><br><span class="line">　　FileDescriptor() fd=<span class="keyword">new</span> FileDescriptor(); </span><br><span class="line">　　FileOutputStream f2=<span class="keyword">new</span> FileOutputStream(fd); </span><br><span class="line">　　<span class="comment">//方式4：构造函数将文件名作为其第一参数，将布尔值作为第二参数。 </span></span><br><span class="line">　　FileOutputStream f=<span class="keyword">new</span> FileOutputStream(<span class="string">&quot;d:/abc.txt&quot;</span>,<span class="keyword">true</span>); </span><br><span class="line">　　<span class="comment">//注意： （1）文件中写数据时，若文件已经存在，则覆盖存在的文件；（2）的读/写操作结束时，应调用close方法关闭流</span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>缓冲输入输出流</strong> <strong>BufferedInputStream/ BufferedOutputStream</strong></p>
+<ol>
+<li><p>计算机访问外部设备非常耗时。访问外存的频率越高，造成CPU闲置的概率就越大。为了减少访问外存的次数，应该在一次对外设的访问中，读写更多的数据。为此，除了程序和流节点间交换数据必需的读写机制外，还应该增加缓冲机制。缓冲流就是每一个数据流分配一个缓冲区，一个缓冲区就是一个临时存储数据的内存。这样可以减少访问硬盘的次数,提高传输效率</p>
+</li>
+<li><p>BufferedInputStream:当向缓冲流写入数据时候，数据先写到缓冲区，待缓冲区写满后，系统一次性将数据发送给输出设备</p>
+</li>
+<li><p>BufferedOutputStream :当从向缓冲流读取数据时候，系统先从缓冲区读出数据，待缓冲区为空时，系统再从输入设备读取数据到缓冲区</p>
+<ul>
+<li><p><strong>将文件读入内存：</strong></p>
+<p>将BufferedInputStream与FileInputStream相接</p>
+<p> FileInputStream in=new FileInputStream( “file1.txt ” );</p>
+<p> BufferedInputStream bin=new BufferedInputStream( in); </p>
+</li>
+<li><p><strong>将内存写入文件：</strong></p>
+<p>将BufferedOutputStream与 FileOutputStream相接</p>
+<p>FileOutputStreamout=new FileOutputStream(“file1.txt”);</p>
+<p>BufferedOutputStream bin=new BufferedInputStream(out);</p>
+</li>
+<li><p><strong>键盘输入流读到内存</strong></p>
+<p>将BufferedReader与标准的数据流相接 </p>
+<p> InputStreamReader sin=new InputStreamReader (System.in) ；</p>
+<p>BufferedReader bin=new       BufferedReader(sin);</p>
+</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//缓冲流实现文件复制</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">code02</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> size;</span><br><span class="line">        FileInputStream f = <span class="keyword">new</span> FileInputStream(<span class="string">&quot;/Users/calvin/IdeaProjects/test/src/iostream_demon/code02.java&quot;</span>);</span><br><span class="line">        FileOutputStream fout = <span class="keyword">new</span> FileOutputStream(<span class="string">&quot;copy-of-file.txt&quot;</span>);</span><br><span class="line"></span><br><span class="line">        BufferedInputStream bis = <span class="keyword">new</span> BufferedInputStream(f);</span><br><span class="line">        BufferedOutputStream bos = <span class="keyword">new</span> BufferedOutputStream(fout);</span><br><span class="line">        System.out.println(<span class="string">&quot;Start Copy Process: &quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> n = f.available();</span><br><span class="line">        <span class="keyword">byte</span> b[] = <span class="keyword">new</span> <span class="keyword">byte</span>[n];</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> ((count = bis.read(b, <span class="number">0</span>, n)) != -<span class="number">1</span>)</span><br><span class="line">            bos.write(b, <span class="number">0</span>, n);</span><br><span class="line">        System.out.println(<span class="string">&quot;Copy End&quot;</span>);</span><br><span class="line">        bis.close();</span><br><span class="line">        bos.flush();</span><br><span class="line">        bos.close();</span><br><span class="line">        f.close();</span><br><span class="line">        fout.flush();</span><br><span class="line">        fout.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://47.118.73.148/2021/12/04/JAVA-Notes/>http://47.118.73.148/2021/12/04/JAVA-Notes/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-12-04T21:28:52+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年12月4日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>JAVA</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://47.118.73.148/2021/12/04/JAVA-Notes/&title=Java-notes - Calvin的博客&summary="
+          
+          >
+          
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://47.118.73.148/2021/12/04/JAVA-Notes/&title=Java-notes - Calvin的博客&summary="
+          
+          >
+          
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2022/03/15/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>改进的梯度下降法</p>
+          <p class='content'>改进的梯度下降法1. 摘要梯度下降是目前最流行的优化算法之一，也是当下Machine Learning和 Deep Learning中最常用的优化算法。目前，每一个流行的深度学习库都包含有关梯度...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/06/13/%E5%88%A9%E7%94%A8fake-location%E5%AE%9E%E7%8E%B0%E4%BB%A3%E8%B7%91/'>
+          <p class='title'>利用Fake-Location实现代跑<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>利用Fake Location实现代跑大学每学期需要乐跑30次（30 * 3km），而我又是一条懒狗，所以就想到用虚拟定位来代跑。如果碰巧你和我一样也是一条懒狗，那不妨也试试。
+
+目前已知Kee...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E5%86%85%E9%83%A8%E5%88%86"><span class="toc-text">课内部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-1%EF%BC%88Java-%E6%A6%82%E8%BF%B0%EF%BC%89"><span class="toc-text">Chapter-1（Java 概述）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-2-%EF%BC%88Java%E5%9F%BA%E7%A1%80%EF%BC%89"><span class="toc-text">Chapter-2 （Java基础）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-3%EF%BC%88%E6%95%B0%E7%BB%84%EF%BC%89"><span class="toc-text">Chapter-3（数组）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-4%EF%BC%88%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%EF%BC%89"><span class="toc-text">Chapter-4（类和对象设计）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-5-%EF%BC%88%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%EF%BC%89"><span class="toc-text">Chapter-5 （继承与多态）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-6%EF%BC%88%E6%A0%87%E5%87%86%E7%B1%BB%E5%BA%93%EF%BC%89"><span class="toc-text">Chapter-6（标准类库）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-7%EF%BC%88%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%EF%BC%89"><span class="toc-text">Chapter-7（异常处理）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-8%EF%BC%88%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%A4%84%E7%90%86%EF%BC%89"><span class="toc-text">Chapter-8（输入输出处理）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"></span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Java-notes";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
+        作为主题
+      
+    
+      
+        
+          <div><p><a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2021017913 </a></p>
+</div>
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2021 By Calvin</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
+
+
+<!-- internal -->
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["/new1.png"];
+        if ('false' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $.backstretch(
+            imgs,
+          {
+            duration: "10000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/issues.min.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SyKTlrfWVNaTQ6f2Oi4HqG8m-9Nh9j0Va","appKey":"niOnDl1zAGu1Rlmz8F7mYd4Y","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  volantis.pjax.push(pjax_valine);
+</script>
+
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/app.min.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/search/hexo.min.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
+    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://47.118.73.148' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://47.118.73.148' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://47.118.73.148' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+	<script>
+		volantis.pjax.push(window.HideLoading,'HideLoading');
+		volantis.pjax.send(window.ShowLoading,'ShowLoading');
+		volantis.pjax.error(window.HideLoading,'HideLoading');
+	</script>
+</div>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script>!function(r){var o=Array.prototype.slice.call(document.querySelectorAll("[data-original]"));function t(){for(var t=0;t<o.length;t++)!function(t){var e,i,n,l;i=o[t],n=i.getBoundingClientRect(),l=r.innerWidth||document.documentElement.clientWidth,i=r.innerHeight||document.documentElement.clientHeight,(100<=n.top||100<=n.left||n.top<0&&100<=n.top+n.height||n.left<0&&100<=n.left+n.width)&&n.top<=i&&n.left<=l&&(e=o[t],i=function(){o.splice(t,1)},n=e.getAttribute("data-original"),"yes"!==e.getAttribute("data-init")&&(l=e.getAttribute("data-isbg"),n=n.replace(/^https?:/,""),l?e.style.backgroundImage=n:e.setAttribute("src",n),e.setAttribute("data-init","yes"),i&&i()))}(t)}t(),r.addEventListener("scroll",t)}(this);</script></body>
+</html>
